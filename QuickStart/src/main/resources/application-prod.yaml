@@ -1,0 +1,8 @@
+server:
+  port: 12323
+  address:
+    - 192.168.31.150
+  serverName: "Production"
+info:
+  name: ${server.serverName} Server
+  address: ${server.address[0]}

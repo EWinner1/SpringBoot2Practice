@@ -1,0 +1,13 @@
+spring:
+  profiles:
+    active: local
+  data:
+    redis:
+      host: 192.168.31.150
+      port: 6379
+      ssl: false
+      database: 0
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    type: com.microsoft.sqlserver.jdbc.SQLServerDataSource
+    url: jdbc:sqlserver://localhost:1433;integratedSecurity=true;trustServerCertificate=true;encrypt=true;Database=MyTestData

@@ -1,0 +1,8 @@
+server:
+  port: 12321
+  address:
+    - localhost
+  serverName: 'Local'
+info:
+  name: ${server.serverName} Server
+  address: ${server.address[0]}

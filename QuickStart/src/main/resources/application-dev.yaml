@@ -1,0 +1,8 @@
+server:
+  port: 12322
+  serverName: "Develop"
+  address:
+    - 127.0.0.1
+info:
+  name: ${server.serverName} Server
+  address: ${server.address[0]}
