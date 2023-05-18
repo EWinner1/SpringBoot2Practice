@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--如果不设置ID，默认的id是class名-->
+    <bean id="userServiceBean" class="com.ewinner.beanfactory.Service.UserService"></bean>
+    <bean id="userDaoBean" class="com.ewinner.beanfactory.Common.Daos.UserDao" init-method="init" destroy-method="destroy">
+        <!--<constructor-arg name="name" value="string"></constructor-arg>-->
+        <!--当需要调用有参的构造函数时，需增加-->
+        <property name="userDao" ref="userDaoBean"></property>
+    </bean>
+    <bean id="bookService" class="com.ewinner.beanfactory.Factory.MyBookFactory" factory-method="bookService"></bean>
+
+    <bean id="myBookFactory" class="com.ewinner.beanfactory.Factory.MyBookFactory"></bean>
+    <bean id="bookService2" factory-bean="myBookFactory" factory-method="bookService2"></bean>
+
+    <bean id="bookService3" class="com.ewinner.beanfactory.Factory.MyBookFactory2"></bean>
+
+    <bean id="bookService4" class="com.ewinner.beanfactory.Factory.MyBookFactory">
+        <property name="list">
+            <list>
+                <value>aaa</value>
+                <value>bbb</value>
+                <value>ccc</value>
+            </list>
+        </property>
+    </bean>
+</beans>
