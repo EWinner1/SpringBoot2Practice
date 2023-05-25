@@ -1,4 +1,4 @@
-package com.ewinner.quickstart.Common.Models;
+package com.ewinner.QuickStart.Common.Models;
 
 import org.springframework.stereotype.Component;
 

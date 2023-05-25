@@ -1,8 +1,14 @@
 server:
   port: 12321
+  serverName: 'Local'
   address:
     - localhost
-  serverName: 'Local'
 info:
   name: ${server.serverName} Server
   address: ${server.address[0]}
+  dockerConfigs:
+    - name: ${server.serverName}-docker1
+      ip-address: 192.168.31.101
+    - name: ${server.serverName}-docker2
+      ip-address: 192.168.31.102
+    - { name: docker3, ipAddress: 192.168.31.103 }

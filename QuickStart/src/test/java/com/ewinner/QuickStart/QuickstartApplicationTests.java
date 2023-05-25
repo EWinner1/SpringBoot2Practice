@@ -1,4 +1,4 @@
-package com.ewinner.quickstart;
+package com.ewinner.QuickStart;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

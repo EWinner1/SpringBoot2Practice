@@ -5,14 +5,14 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.0.6</version>
+        <version>3.1.0</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.ewinner</groupId>
     <artifactId>QuickStart</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>quickstart</name>
-    <description>quickstart</description>
+    <name>QuickStart</name>
+    <description>QuickStart</description>
     <properties>
         <java.version>20</java.version>
     </properties>
@@ -42,6 +42,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-properties-migrator</artifactId>
             <scope>runtime</scope>
+        </dependency>
+        <!--配置文件相关的依赖-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
         </dependency>
     </dependencies>
 
