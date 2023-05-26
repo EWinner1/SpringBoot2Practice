@@ -16,5 +16,4 @@ public class QuickstartApplication {
         User userBean = ctx.getBean(User.class);
         System.out.println("-------------------" + "\n" + userBean);
     }
-
 }
