@@ -10,6 +10,7 @@
         <module name="quickstart" />
         <module name="Integration" />
         <module name="QuickStart" />
+        <module name="MyBatisPlusTest" />
         <module name="YamlTest" />
       </profile>
     </annotationProcessing>
@@ -21,6 +22,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="BeanFactory" options="-parameters" />
       <module name="Integration" options="-parameters" />
+      <module name="MyBatisPlusTest" options="-parameters" />
       <module name="QuickStart" options="-parameters" />
       <module name="YamlTest" options="-parameters" />
       <module name="quickstart" options="-parameters" />

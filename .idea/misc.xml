@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/BeanFactory/pom.xml" />
         <option value="$PROJECT_DIR$/YamlTest/pom.xml" />
         <option value="$PROJECT_DIR$/Integration/pom.xml" />
+        <option value="$PROJECT_DIR$/MyBatisPlusTest/pom.xml" />
       </list>
     </option>
   </component>
