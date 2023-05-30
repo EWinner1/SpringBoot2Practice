@@ -8,22 +8,22 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class IntegrationApplicationTests {
-	@Autowired
-	private IBookDao bookDao;
-	@Autowired
-	private IPeopleDao peopleDao;
+    @Autowired
+    private IBookDao bookDao;
+    @Autowired
+    private IPeopleDao peopleDao;
 
-	@Test
-	void contextLoads() {
-	}
+    @Test
+    void contextLoads() {
+    }
 
-	@Test
-	void bookDaoTest(){
-		bookDao.save();
-	}
+    @Test
+    void bookDaoTest() {
+        bookDao.save();
+    }
 
-	@Test
-	void getPeopleById(){
-		System.out.println(peopleDao.getPeopleById(1L));
-	}
+    @Test
+    void getPeopleById() {
+        System.out.println(peopleDao.getPeopleById(1L));
+    }
 }

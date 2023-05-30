@@ -1,11 +1,13 @@
-package com.ewinner.integration;
+package com.ewinner.ssmptest;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class IntegrationApplication {
+public class SSMPApplication {
+
     public static void main(String[] args) {
-        SpringApplication.run(IntegrationApplication.class, args);
+        SpringApplication.run(SSMPApplication.class, args);
     }
+
 }

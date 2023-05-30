@@ -6,12 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="BeanFactory" />
         <module name="quickstart" />
         <module name="Integration" />
         <module name="QuickStart" />
         <module name="MyBatisPlusTest" />
         <module name="YamlTest" />
+        <module name="BeanFactory" />
+        <module name="SSMPTest" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -24,6 +25,7 @@
       <module name="Integration" options="-parameters" />
       <module name="MyBatisPlusTest" options="-parameters" />
       <module name="QuickStart" options="-parameters" />
+      <module name="SSMPTest" options="-parameters" />
       <module name="YamlTest" options="-parameters" />
       <module name="quickstart" options="-parameters" />
     </option>

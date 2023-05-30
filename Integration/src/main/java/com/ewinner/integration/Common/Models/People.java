@@ -1,7 +1,5 @@
 package com.ewinner.integration.Common.Models;
 
-import java.math.BigInteger;
-
 public class People {
     private Long id;
     private String Name;

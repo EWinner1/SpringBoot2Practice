@@ -1,6 +1,5 @@
 package com.ewinner.integration.Common.Daos;
 
-import com.ewinner.integration.Common.Models.Book;
 import org.apache.ibatis.annotations.Select;
 
 public interface IBookDao {
