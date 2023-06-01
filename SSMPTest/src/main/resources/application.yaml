@@ -6,14 +6,15 @@ spring:
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
     url: jdbc:sqlserver://localhost:1433;integratedSecurity=true;trustServerCertificate=true;encrypt=true;Database=MyTestData
     type: com.microsoft.sqlserver.jdbc.SQLServerDataSource
-#    url: jdbc:sqlserver://localhost:1433;trustServerCertificate=true;encrypt=true;Database=MyTestData
-#    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
-#    username:
-#    password:
+    # url: jdbc:sqlserver://localhost:1433;trustServerCertificate=true;encrypt=true;Database=MyTestData
+    # driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    # username:
+    # password:
 mybatis-plus:
   configuration:
     #在映射实体或者属性时，将数据库中表名和字段名中的下划线去掉，按照驼峰命名法映射 address_book ---> addressBook
     map-underscore-to-camel-case: false
+    # 开启MP log
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 #  global-config:
 #    db-config:

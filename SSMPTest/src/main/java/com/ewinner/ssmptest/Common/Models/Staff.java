@@ -1,4 +1,4 @@
-package com.ewinner.ssmptest.Models;
+package com.ewinner.ssmptest.Common.Models;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -10,6 +10,6 @@ public class Staff {
     private Integer id;
     private String name;
     private String sex;
-    private String staffLevel;
+    private Integer staffLevel;
     private String description;
 }

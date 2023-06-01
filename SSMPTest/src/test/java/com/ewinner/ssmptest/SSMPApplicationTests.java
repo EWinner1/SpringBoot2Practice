@@ -1,7 +1,9 @@
 package com.ewinner.ssmptest;
 
-import com.ewinner.ssmptest.Daos.StaffDao;
-import com.ewinner.ssmptest.Models.Staff;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.ewinner.ssmptest.Common.Daos.StaffDao;
+import com.ewinner.ssmptest.Common.Models.Staff;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -26,7 +28,7 @@ class SSMPApplicationTests {
         staff.setName("Tony Stark");
         staff.setSex("male");
         staff.setDescription("I am Airman");
-        staff.setStaffLevel("1");
+        staff.setStaffLevel(1);
         staffDao.insert(staff);
         System.out.println("Save success!\n" + staff);
     }
@@ -60,5 +62,15 @@ class SSMPApplicationTests {
         Integer id = 41;
         Staff staff = staffDao.selectById(id);
         System.out.println(staff == null ? "id: " + id + "查无此人" : staff);
+    }
+
+    @Test
+    void getByPage(){
+        IPage<Staff> page0 = new Page<>(0, 7);
+        IPage<Staff> page1 = new Page<>(1, 7);
+        IPage<Staff> page2 = new Page<>(2, 7);
+        staffDao.selectPage(page0, null);
+        staffDao.selectPage(page1, null);
+        System.out.println(staffDao.selectPage(page2, null).getRecords().toString().replaceAll("(?<=\\)), ", "\n"));
     }
 }
