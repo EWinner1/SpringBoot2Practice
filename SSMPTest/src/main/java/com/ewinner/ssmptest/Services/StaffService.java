@@ -1,6 +1,8 @@
 package com.ewinner.ssmptest.Services;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.ewinner.ssmptest.Common.Daos.StaffDao;
 import com.ewinner.ssmptest.Common.Models.Staff;
 import com.ewinner.ssmptest.Interfaces.IStaffService;
@@ -71,4 +73,11 @@ public class StaffService implements IStaffService {
     public List<Staff> getAll() {
         return staffDao.selectList(null);
     }
+
+    @Override
+    public List<Staff> getPage(Integer currentPage, Integer pageSize) {
+        IPage<Staff> page = new Page<>(currentPage, pageSize);
+        return staffDao.selectPage(page, null).getRecords();
+    }
+
 }

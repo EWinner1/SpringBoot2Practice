@@ -16,4 +16,5 @@ public interface IStaffService {
     List<Staff> getOnCondition(LambdaQueryWrapper<Staff> condition);
     Staff getOneOnCondition(LambdaQueryWrapper<Staff> condition);
     List<Staff> getAll();
+    List<Staff> getPage(Integer currentPage, Integer pageSize);
 }
