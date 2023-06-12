@@ -9,4 +9,5 @@ import org.apache.ibatis.annotations.ConstructorArgs;
 public class Result {
     private Boolean flag;
     private Object data;
+    private String msg;
 }

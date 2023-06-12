@@ -3,6 +3,7 @@ package com.ewinner.ssmptest.Interfaces;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.ewinner.ssmptest.Common.Models.Staff;
 
+import java.awt.print.Book;
 import java.util.List;
 
 public interface IStaffService {
@@ -16,5 +17,5 @@ public interface IStaffService {
     List<Staff> getOnCondition(LambdaQueryWrapper<Staff> condition);
     Staff getOneOnCondition(LambdaQueryWrapper<Staff> condition);
     List<Staff> getAll();
-    List<Staff> getPage(Integer currentPage, Integer pageSize);
+    List<Staff> getPage(Integer currentPage, Integer pageSize, Staff staff);
 }

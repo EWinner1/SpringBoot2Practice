@@ -6,8 +6,10 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.ewinner.ssmptest.Common.Daos.StaffDao;
 import com.ewinner.ssmptest.Common.Models.Staff;
 import com.ewinner.ssmptest.Interfaces.IStaffService;
+import org.apache.logging.log4j.util.Strings;
 import org.springframework.stereotype.Service;
 
+import java.awt.print.Book;
 import java.util.List;
 
 @Service
@@ -75,9 +77,15 @@ public class StaffService implements IStaffService {
     }
 
     @Override
-    public List<Staff> getPage(Integer currentPage, Integer pageSize) {
+    public List<Staff> getPage(Integer currentPage, Integer pageSize, Staff staff) {
+        LambdaQueryWrapper<Staff> lqw = new LambdaQueryWrapper<Staff>();
+        lqw.like(Strings.isNotEmpty(staff.getName()), Staff::getName, staff.getName());
+        lqw.like(Strings.isNotEmpty(staff.getSex()), Staff::getSex, staff.getSex());
+        lqw.like(staff.getStaffLevel() != null, Staff::getStaffLevel, staff.getStaffLevel());
         IPage<Staff> page = new Page<>(currentPage, pageSize);
-        return staffDao.selectPage(page, null).getRecords();
+        if (currentPage > page.getPages())
+            page = new Page<>(page.getPages(), pageSize);
+        return staffDao.selectPage(page, lqw).getRecords();
     }
 
 }

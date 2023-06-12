@@ -44,6 +44,6 @@ public class StaffController {
 
     @GetMapping("/{currentPage}/{pageSize}")
     public List<Staff> getPage(@PathVariable Integer currentPage, @PathVariable Integer pageSize){
-        return staffService.getPage(currentPage, pageSize);
+        return staffService.getPage(currentPage, pageSize, null);
     }
 }
