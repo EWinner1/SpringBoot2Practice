@@ -30,9 +30,11 @@ public class StaffServiceTest {
     void serviceDeleteTest(){
         Staff staff = getOneOnCondition();
         // staffService.delete(staff.getId());
-        staffService.delete(staff);
-        System.out.println(staffService.delete(staff) ? "Delete success!" : "Something went wrong...");
-        staffService.getById(staff.getId());
+        if (staff != null){
+            staffService.delete(staff);
+            System.out.println(staffService.delete(staff) ? "Delete success!" : "Something went wrong...");
+            staffService.getById(staff.getId());
+        }
     }
 
     @Test

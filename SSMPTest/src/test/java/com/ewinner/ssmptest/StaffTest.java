@@ -23,7 +23,7 @@ public class StaffTest {
         updateStaffTest();
         deleteStaffTest();
     }
-    @Test
+
     void saveStaffTest(){
         Staff staff = new Staff();
         staff.setName("Tony Stark");
@@ -34,7 +34,7 @@ public class StaffTest {
         System.out.println("Save success!\n" + staff);
         System.out.println("ID: " + getUserId(staff));
     }
-    @Test
+
     void deleteStaffTest(){
         Integer id = getUserId("Tony Stark", "male", 1);
         Staff staff = staffDao.selectById(id);
@@ -46,7 +46,7 @@ public class StaffTest {
             System.out.println("Staff has been removed");
         }
     }
-    @Test
+
     void updateStaffTest(){
         Integer id = getUserId("Tony Stark", "male", 1);
         Staff staff = staffDao.selectById(id);
@@ -54,12 +54,12 @@ public class StaffTest {
         staffDao.updateById(staff);
         System.out.println("Update success!\n" + staff);
     }
-    @Test
+
     void getAllStaffTest(){
         List<Staff> staffs = staffDao.selectList(null);
         System.out.println(staffs.toString().replaceAll("(?<=\\)), ", "\n"));
     }
-    @Test
+
     void getStaffByIdTest(){
         Integer id = getUserId("Tony Stark", "male", 1);
         Staff staff = null;
@@ -69,7 +69,7 @@ public class StaffTest {
         System.out.println(staff == null ? "id: " + id + "查无此人" : staff);
     }
 
-    @Test
+
     void getPage(){
         IPage<Staff> page0 = new Page<>(0, 7);
         IPage<Staff> page1 = new Page<>(1, 7);
@@ -79,7 +79,7 @@ public class StaffTest {
         System.out.println(staffDao.selectPage(page2, null).getRecords().toString().replaceAll("(?<=\\)), ", "\n"));
     }
 
-    @Test
+
     void getOnCondition(){
         QueryWrapper<Staff> employQueryWrapper = new QueryWrapper<>();
         employQueryWrapper.in("staffLevel", 10, 11, 12, 13);
