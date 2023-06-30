@@ -10,6 +10,7 @@
         <option value="$PROJECT_DIR$/Integration/pom.xml" />
         <option value="$PROJECT_DIR$/MyBatisPlusTest/pom.xml" />
         <option value="$PROJECT_DIR$/SSMPTest/pom.xml" />
+        <option value="$PROJECT_DIR$/Log/pom.xml" />
       </list>
     </option>
   </component>

@@ -11,6 +11,7 @@
         <module name="Integration" />
         <module name="QuickStart" />
         <module name="MyBatisPlusTest" />
+        <module name="Log" />
         <module name="YamlTest" />
         <module name="BeanFactory" />
         <module name="SSMPTest" />
@@ -24,6 +25,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="BeanFactory" options="-parameters" />
       <module name="Integration" options="-parameters" />
+      <module name="Log" options="-parameters" />
       <module name="MyBatisPlusTest" options="-parameters" />
       <module name="QuickStart" options="-parameters" />
       <module name="SSMPTest" options="-parameters" />
