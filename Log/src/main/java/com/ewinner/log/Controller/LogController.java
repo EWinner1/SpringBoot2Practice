@@ -1,5 +1,6 @@
 package com.ewinner.log.Controller;
 
+import com.ewinner.log.Utils.UtilsClass;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -9,9 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/log")
-public class LogController {
-    private static final Logger log = LoggerFactory.getLogger(LogController.class);
-
+public class LogController extends UtilsClass {
     @PutMapping
     public Boolean logInfo(@RequestBody String string) {
         log.info(string);

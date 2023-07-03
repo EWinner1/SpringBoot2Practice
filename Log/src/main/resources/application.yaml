@@ -1,3 +1,10 @@
 logging:
   level:
     root: info
+    com:
+      ewinner:
+        LogController: error
+    mytest: info
+  group:
+    mytest: com.ewinner.log.Controller.LogController # ,xxx.xxx.xxx
+    sun: com.sun
